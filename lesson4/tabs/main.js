@@ -19,6 +19,29 @@ tabs.addEventListener('click', e => {
 	}
 })
 
+const tabsDop = document.getElementById('tabs-dop');
+const contentDop = document.querySelectorAll('.content-dop');
+
+const changeClassDop = el => {
+	for(i = 0; i < contentDop.length; i++) {
+		tabsDop.children[i].classList.remove('active');
+	}
+	el.classList.add('active');
+}
+// changeClassDop()
+
+tabsDop.addEventListener('click', e => {
+	const currTabDop = e.target.dataset.btndop;
+	changeClassDop(e.target);
+	for(i = 0; i < contentDop.length; i++) {
+		contentDop[i].classList.remove('active');
+		if(contentDop[i].dataset.contentdop === currTabDop) {
+			contentDop[i].classList.add('active');
+		}
+	}
+})
+
+/*
 const contentTabs = document.getElementById('content-tabs');
 
 const changeTabClass = elem => {
@@ -31,4 +54,4 @@ const changeTabClass = elem => {
 contentTabs.addEventListener('click', e => {
 	const currContentTab = e.target.dataset.more;
 	changeTabClass(e.target);
-})
+})*/
