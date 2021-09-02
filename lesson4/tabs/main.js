@@ -40,18 +40,3 @@ tabsDop.addEventListener('click', e => {
 		}
 	}
 })
-
-/*
-const contentTabs = document.getElementById('content-tabs');
-
-const changeTabClass = elem => {
-	for(i = 0; i < contentTabs.children.length; i++) {
-		contentTabs.children[i].classList.remove('active-tab');
-	}
-	elem.classList.add('active-tab');
-}
-
-contentTabs.addEventListener('click', e => {
-	const currContentTab = e.target.dataset.more;
-	changeTabClass(e.target);
-})*/
