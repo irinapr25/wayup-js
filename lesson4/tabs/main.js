@@ -28,7 +28,6 @@ const changeClassDop = el => {
 	}
 	el.classList.add('active');
 }
-// changeClassDop()
 
 tabsDop.addEventListener('click', e => {
 	const currTabDop = e.target.dataset.btndop;
